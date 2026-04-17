@@ -1,0 +1,84 @@
+{
+  "projectType": "saas",
+  "projectName": "Energy Arc",
+  "projectDescription": "A browser-based DJ set planning tool that auto-generates an energy arc from your track list and lets you drag songs between phases while scoring every transition in real time.",
+  "theme": "almond",
+  "primaryColor": "#6B46C1",
+  "lightColor": "#EDE9FE",
+  "darkColor": "#3B1F8C",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/energy-arc",
+              "concepts/phases",
+              "concepts/transition-scoring",
+              "concepts/track-tags"
+            ]
+          },
+          {
+            "group": "Using the Board",
+            "pages": [
+              "guides/importing-tracks",
+              "guides/generate-board",
+              "guides/dragging-tracks",
+              "guides/track-inspector",
+              "guides/crate"
+            ]
+          },
+          {
+            "group": "Smart Features",
+            "pages": [
+              "guides/priorities-engine",
+              "guides/recommendations",
+              "guides/quick-readouts"
+            ]
+          },
+          {
+            "group": "Saving & Exporting",
+            "pages": [
+              "guides/save-load",
+              "guides/export-csv"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Auto-generate a stage-based energy arc from a pasted track list",
+    "Drag-and-drop tracks between phases like index cards on a studio wall",
+    "Real-time transition scoring (BPM continuity, key compatibility, energy smoothness)",
+    "Live arc chart comparing ideal vs. current board order",
+    "Track Inspector to manually correct auto-detected tags",
+    "Crate for staging alternate tracks without committing them to the board",
+    "Smart recommendations: best crate picks per phase, arc warnings, boundary checks",
+    "Tunable priority engine (BPM, Camelot, energy, arc fit, vibe, vocals)",
+    "Save/load full boards as JSON; export to CSV",
+    "Fully local — no account, no server, no cloud sync"
+  ],
+  "publicApiSurface": [
+    "Import tracks via paste (Excel/CSV tab-separated)",
+    "Generate Board action",
+    "Auto Analyze Tracks action",
+    "Auto Stage-Fit Set action",
+    "Priority sliders: BPM continuity, Key compatibility, Energy smoothness, Arc fit, Vibe continuity, Vocals continuity",
+    "Track Inspector fields: BPM, Key, Energy, Role (SETTLE/SIMMER/NUDGE/SPIKE/RELEASE), Vocals (LOW/MID/HIGH), Drums (SOFT/ROLLING/PUNCHY), Vibe (ORGANIC/MELODIC/INDIE/DARK/RAVEY)",
+    "Transition badge scores and technique labels",
+    "Save JSON / Load JSON file",
+    "Export CSV",
+    "Crate drop zone",
+    "Phase columns: Introduction, Early Groove, Lift, Peak, Landing"
+  ]
+}

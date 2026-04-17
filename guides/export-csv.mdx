@@ -1,0 +1,72 @@
+---
+title: "Export your set list to CSV"
+description: "Download your finalised track sequence as a CSV file to paste into a spreadsheet, share with a promoter, print for the booth, or archive."
+---
+
+When your sequence feels right, click **Export CSV** to download a plain-text spreadsheet of your entire set. The CSV captures the track order and metadata in a format you can open in any spreadsheet application, share with a venue or promoter, or print out and pin to the booth.
+
+## What the CSV contains
+
+The exported file includes one row per track in the sequence, in the order tracks appear on the board from top to bottom across all phases. Typical columns include:
+
+| Column | Content |
+|---|---|
+| Position | Track number in the running order (1, 2, 3, …) |
+| Phase | The phase the track is assigned to (Introduction, Early Groove, Lift, Peak, Landing) |
+| Title | Track title |
+| Artist | Artist name |
+| BPM | Tempo in beats per minute |
+| Key | Musical key |
+| Energy | Energy level tag |
+| Vibe | Vibe or genre tag |
+| Vocals | Vocal presence tag |
+
+<Note>
+  Only committed tracks appear in the CSV export. Tracks still sitting in the crate are excluded. Commit any tracks you want in the export before clicking **Export CSV**.
+</Note>
+
+## How to export
+
+<Steps>
+  <Step title="Finalise your sequence">
+    Drag tracks into their final positions and confirm that the arc chart and transition scores look the way you want them.
+  </Step>
+  <Step title="Click Export CSV">
+    The browser downloads a CSV file immediately. No confirmation dialog appears — the download starts right away.
+  </Step>
+  <Step title="Open the file">
+    Open the CSV in your preferred application: Excel, Google Sheets, Numbers, or any plain-text editor.
+  </Step>
+</Steps>
+
+## Use cases
+
+<CardGroup cols={2}>
+  <Card title="Paste into your own spreadsheet" icon="table">
+    Copy the rows into an existing planning template, add columns for notes, BPM ranges, or crowd reactions, and build on top of the Energy Arc export.
+  </Card>
+  <Card title="Share the sequence" icon="share-nodes">
+    Send the CSV to a promoter, a co-DJ, or a label for review. Anyone with a spreadsheet application can open it without needing access to Energy Arc.
+  </Card>
+  <Card title="Print for the booth" icon="print">
+    Open in a spreadsheet, tighten the column widths, and print. A paper copy of the running order is useful if you prefer to work from a physical cue sheet during the set.
+  </Card>
+  <Card title="Archive the sequence" icon="folder-open">
+    Keep a CSV per event as a lightweight record of what you played and in what order, without needing to maintain the full JSON board state.
+  </Card>
+</CardGroup>
+
+## CSV vs. JSON: which to use
+
+The CSV and the JSON file serve different purposes. Understanding the difference helps you choose the right format for each situation.
+
+| Format | What it contains | When to use it |
+|---|---|---|
+| **CSV** | Track order and metadata only — a flat spreadsheet view | Sharing the sequence, printing, pasting into other tools |
+| **JSON** | Full board state — track data, phase assignments, priority slider values, arc state | Reloading the board in Energy Arc, keeping a complete backup, transferring between machines |
+
+If you want to come back and keep editing the board in Energy Arc, save the JSON file. If you want a human-readable summary of the finished sequence, export the CSV.
+
+<Tip>
+  The **Save JSON + CSV** button downloads both files at once. Use it as your "done for the session" action: you get a full backup (JSON) and a shareable summary (CSV) in one click.
+</Tip>

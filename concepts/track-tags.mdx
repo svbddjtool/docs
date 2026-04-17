@@ -1,0 +1,81 @@
+---
+title: "Track tags and what they mean"
+description: "Track tags describe the musical character of each track across four dimensions: Role, Vocals, Drums, and Vibe. They drive scoring and board placement."
+---
+
+Every track on the board carries a set of tags that describe its musical character. Energy Arc uses these tags when it calculates transition scores, auto-places tracks during **Generate Board**, and shows sub-labels on transition badges. You can view and edit all tags in the **Track Inspector**.
+
+There are four tag dimensions: **Role**, **Vocals**, **Drums**, and **Vibe**. Each dimension has its own fixed set of options.
+
+## Role
+
+Role is the most influential tag. It describes the job a track does in the energy arc — how much it pushes energy up, holds it steady, or brings it down. Energy Arc uses Role to determine which phase a track belongs in and how it contributes to arc fit scoring.
+
+| Role | What it means | Typical phase |
+|------|---------------|---------------|
+| **SETTLE** | Low-pressure, atmospheric. Sets the mood without demanding energy. | Introduction, Landing |
+| **SIMMER** | Gentle groover. Enough movement to hold attention, not enough to build pressure. | Introduction, Early Groove |
+| **NUDGE** | Builder. Moves energy upward at a controlled pace. | Early Groove, Lift |
+| **SPIKE** | Peak-level energy. Demands full commitment from the floor. | Lift, Peak |
+| **RELEASE** | Tension-reliever. Lets the crowd exhale after the climax. | Landing |
+
+<Note>
+  When you import tracks, Energy Arc infers Role from a combination of Energy, BPM, and Vibe. If the inferred role doesn't match how you plan to use a track, change it in the **Track Inspector** — the transition scores and arc fit calculation will update immediately.
+</Note>
+
+## Vocals
+
+Vocals describes the prominence of vocal elements in the track. Transitions between tracks with very different vocal levels can feel abrupt, which is why Energy Arc factors this into vibe continuity scoring.
+
+| Tag | What it means |
+|-----|---------------|
+| **LOW** | Minimal or no vocals. Mostly instrumental, spoken word buried low in the mix, or heavily processed vocals used as texture. |
+| **MID** | Vocals are present but share the mix with other elements — hooks, fragments, or vocals that drop in and out. |
+| **HIGH** | Vocals are front and centre throughout most of the track. The voice is the dominant element. |
+
+<Tip>
+  Moving from a HIGH vocal track to a LOW vocal track (or the reverse) can work musically, but it's a strong contrast. Use a technique like a long EQ blend or a breakdown entry to make the shift feel deliberate rather than accidental.
+</Tip>
+
+## Drums
+
+Drums describes the character and intensity of the rhythmic elements. This tag informs texture continuity — transitions between tracks with very different drum feels can create a texture shift that stands out in a mix.
+
+| Tag | What it means |
+|-----|---------------|
+| **SOFT** | Light or sparse percussion. May include brushed rhythms, minimal kick, or percussion-forward rather than drum-forward patterns. Suits Introduction and Landing tracks. |
+| **ROLLING** | Continuous, driving rhythm. The drum pattern keeps momentum without being punchy or aggressive. Common in deep house, melodic techno, and progressive tracks. |
+| **PUNCHY** | Hard-hitting, transient-forward kick and snare. The drums demand physical presence on the floor. Typical of peak-hour techno, hard house, and driving club music. |
+
+## Vibe
+
+Vibe captures the overall texture and aesthetic feel of the track. It is the broadest tag and the most subjective, but it has a direct effect on vibe continuity scoring. Tracks with the same or adjacent Vibe tags blend more naturally; sharp jumps between unrelated vibes produce texture shift sub-labels on transition badges.
+
+| Tag | What it means |
+|-----|---------------|
+| **ORGANIC** | Warm, acoustic, or natural textures. Percussive elements feel hand-played or earthy. Afrobeat, organic house, and world-music-influenced tracks often carry this tag. |
+| **MELODIC** | Harmonic and melodic content is the dominant characteristic. Lush pads, expressive synths, and chord progressions define the track's identity. |
+| **INDIE** | Indie dance or alternative electronic. Often carries live instrumentation, post-punk influences, or an intentionally rough-around-the-edges aesthetic. |
+| **DARK** | Heavy, brooding, or industrial textures. Reduced harmonic warmth, often driven by tension rather than release. Dark techno, industrial, and minimal tracks. |
+| **RAVEY** | Euphoric, high-energy, and unambiguously club-focused. Driven by rave-culture references: acid lines, hooky breakdowns, big builds, and crowd-rousing drops. |
+
+## How tags affect scoring
+
+Tags feed into three of the six transition scoring factors:
+
+| Scoring factor | Tags used |
+|----------------|-----------|
+| Arc fit | Role |
+| Vibe continuity | Vibe |
+| Vocals continuity | Vocals |
+
+Drums and Vibe both contribute to the texture sub-labels shown on transition badges (**"textures feel related"** / **"texture shift is sharp"**).
+
+<AccordionGroup>
+  <Accordion title="What happens if I leave tags at their defaults?">
+    Energy Arc infers all tags at import time based on the track's BPM, Energy, and Key fields. The inferences are reasonable starting points, but they won't always be correct — especially for Role and Vibe, which are musically subjective. Reviewing tags in the **Track Inspector** for at least your highest-stakes tracks will improve the accuracy of transition scores and phase placement.
+  </Accordion>
+  <Accordion title="Can two tracks share the same Vibe tag and still score poorly?">
+    Yes. Vibe is only one of six scoring factors. Two DARK tracks can still score poorly on BPM continuity if their tempos are far apart, or on key compatibility if they clash harmonically. A high Vibe continuity contribution can offset a weak key score, but it won't override it entirely.
+  </Accordion>
+</AccordionGroup>

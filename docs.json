@@ -1,0 +1,67 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "Energy Arc",
+  "theme": "almond",
+  "colors": {
+    "primary": "#6B46C1",
+    "light": "#EDE9FE",
+    "dark": "#3B1F8C"
+  },
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Open App",
+      "href": "https://energyarc-setlist-tool.vercel.app/"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/energy-arc",
+              "concepts/phases",
+              "concepts/transition-scoring",
+              "concepts/track-tags"
+            ]
+          },
+          {
+            "group": "Using the Board",
+            "pages": [
+              "guides/importing-tracks",
+              "guides/generate-board",
+              "guides/dragging-tracks",
+              "guides/track-inspector",
+              "guides/crate"
+            ]
+          },
+          {
+            "group": "Smart Features",
+            "pages": [
+              "guides/priorities-engine",
+              "guides/recommendations",
+              "guides/quick-readouts"
+            ]
+          },
+          {
+            "group": "Saving & Exporting",
+            "pages": [
+              "guides/save-load",
+              "guides/export-csv"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

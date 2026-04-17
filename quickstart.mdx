@@ -1,0 +1,92 @@
+---
+title: "Get started with Energy Arc"
+description: "Import your tracks, generate a five-phase board, refine the sequence by dragging cards, and save your set — all in a few minutes."
+---
+
+Energy Arc runs entirely in your browser. Open the app, bring your track list, and you can have a scored, phase-structured set board ready in under five minutes. This guide walks you through each step from a blank slate to a saved board.
+
+<Steps>
+  <Step title="Open the app">
+    Navigate to [energyarc-setlist-tool.vercel.app](https://energyarc-setlist-tool.vercel.app/) in any modern browser. No sign-up or installation is required.
+  </Step>
+
+  <Step title="Import your tracks">
+    You have two ways to bring tracks into Energy Arc:
+
+    **Paste from Excel or CSV**
+
+    Copy rows from your spreadsheet and paste them directly into the import field. Energy Arc expects these columns in order:
+
+    | Column | Example |
+    |--------|---------|
+    | Track Title | Sunrise Protocol |
+    | Artist | Ame |
+    | Album | Chronicle |
+    | BPM | 123 |
+    | Time | 7:42 |
+    | Key | 8A |
+
+    **Load the demo set**
+
+    Click **Load Demo Set** to populate the board with sample tracks. This is a quick way to explore the interface before adding your own music.
+
+    <Tip>
+      Key values use Camelot Wheel notation (e.g. `8A`, `11B`). If your spreadsheet uses standard notation, convert it before importing — the scoring engine relies on Camelot values for key compatibility checks.
+    </Tip>
+  </Step>
+
+  <Step title="Tune the priority sliders (optional)">
+    Before generating the board, you can adjust how the scoring engine weighs each factor using the priority sliders. Each slider runs from 1 (low weight) to 10 (high weight):
+
+    - **BPM continuity** — penalises large tempo jumps between neighbours
+    - **Key compatibility** — rewards Camelot-compatible transitions
+    - **Energy smoothness** — favours gradual energy changes
+    - **Arc fit** — rewards tracks whose energy level matches the ideal arc for their phase
+    - **Vibe continuity** — groups tracks with compatible vibes
+    - **Vocals continuity** — avoids jarring vocal-level shifts
+
+    The defaults work well for most sets. Come back to sliders after your first generate if scoring feels off.
+  </Step>
+
+  <Step title="Click Generate Board">
+    Click **Generate Board**. Energy Arc sorts your tracks into five phases — Introduction, Early Groove, Lift, Peak, and Landing — following an ideal energy arc. Each track card displays a transition badge showing the score for the connection to the next track.
+
+    The **Live Arc** chart appears at the top of the board: the dashed line shows the ideal arc; the solid line shows where your current board sits.
+
+    <Note>
+      Transition scores run from 0–100. Any transition scoring below ~65 is flagged as a risky hop. These aren't errors — they're prompts to check whether that neighbour pair works for your intended crowd.
+    </Note>
+  </Step>
+
+  <Step title="Drag tracks to refine the sequence">
+    The generated board is a starting point. Drag cards to adjust the sequence:
+
+    - **Within a phase** — drag a card up or down to reorder it.
+    - **Between phases** — drag a card to a different phase column to move it there.
+
+    Transition badges and the Live Arc chart update in real time as you drag.
+
+    **Using the Track Inspector**
+
+    Click any track card to open the Track Inspector. From here you can manually edit BPM, key, energy level, role, vocals (LOW / MID / HIGH), drums (SOFT / ROLLING / PUNCHY), and vibe (ORGANIC / MELODIC / INDIE / DARK / RAVEY). Scores recalculate immediately after you save changes.
+
+    **Using the Crate**
+
+    Tracks you aren't ready to commit to the board live in the Crate — a bench area alongside the phases. The recommendations panel highlights the best crate tracks for each phase and flags any arc warnings or phase boundary issues.
+
+    <Tip>
+      If a phase feels weak, check the recommendations panel. It surfaces the highest-scoring crate tracks for that phase so you don't have to audition every option manually.
+    </Tip>
+  </Step>
+
+  <Step title="Save your board">
+    When you're happy with the sequence, use one of two export options:
+
+    - **Save JSON** — saves the full board state, including crate tracks, inspector edits, and slider settings. Use **Load JSON** later to restore it exactly.
+    - **Export CSV** — exports the current board sequence as a spreadsheet-ready file, useful for importing into DJ software or sharing with others.
+
+    <Warning>
+      Energy Arc saves to `localStorage` automatically as you work, but this storage is tied to your browser and machine. Always use **Save JSON** before clearing browser data, switching browsers, or moving to a different computer.
+    </Warning>
+  </Step>
+</Steps>

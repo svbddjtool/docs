@@ -1,0 +1,92 @@
+---
+title: "Smart recommendations and arc warnings"
+description: "Use the Smart Recommendations panel to get phase-specific track suggestions, catch arc drift, review phase boundary scores, and fix risky transitions."
+---
+
+The **Smart Recommendations** panel is your DJ co-pilot. It watches the board as you drag tracks and surfaces four types of insight: the best uncommitted tracks to pull in from the crate for each phase, warnings when the energy arc drifts from its target, scored assessments of how well each phase connects to the next, and a list of any risky track-to-track hops that need attention.
+
+## Best from crate
+
+When you have tracks sitting in the crate (uncommitted to any phase), the panel suggests which ones would fit best in each phase of the current board.
+
+The suggestion engine scores each crate track against each phase position using the same weighted factors as the main scoring engine — BPM continuity, key compatibility, energy, arc fit, vibe, and vocals. It then surfaces the tracks with the highest combined fit scores for each phase, so the suggestion automatically reflects your current priority slider settings.
+
+Use these suggestions as a starting point: drag a suggested track from the crate directly into the phase the panel highlights and watch how the transition scores respond.
+
+<Tip>
+  If the suggestions do not look right, check whether the crate tracks have accurate tags. The engine relies on BPM, key, energy level, and vibe tags to calculate fit. Open a card's inspector to correct any tags the auto-detector guessed wrong.
+</Tip>
+
+## Arc warnings
+
+The panel monitors the live arc chart and compares each phase's average energy against the target arc (the dashed line). When the board is on track you will see a message like:
+
+> Arc is tracking the dashed line pretty nicely
+
+A warning appears when one or more phases have drifted meaningfully above or below the target. Common causes:
+
+- A high-energy track placed too early in the Introduction or Early Groove phases
+- Too many low-energy tracks in the Peak phase
+- A sudden gap or spike between adjacent phases caused by a recent drag
+
+To resolve an arc warning, look at which phase the panel flags and consider moving the outlier track to a phase that better matches its energy level, or swap it into the crate and replace it with a track closer to the target energy for that slot.
+
+<Note>
+  The arc warning is a guide, not a hard block. Some intentional deviations — a surprise early peak, a long plateau — are valid creative choices. The warning simply tells you the board is diverging from the default arc shape.
+</Note>
+
+## Phase boundary checks
+
+The panel includes a dedicated section for each phase-to-phase boundary: Introduction → Early Groove, Early Groove → Lift, Lift → Peak, and Peak → Landing. Each boundary check shows:
+
+- **Score** — a numeric fit rating for the transition between the last track of one phase and the first track of the next
+- **Transition technique** — a suggested DJ technique that suits the specific track pairing (for example, "Breakdown entry or echo out")
+- **Sub-labels** — short diagnostic notes about the specific factors driving the score, such as "tempo nearly locked", "key clash risk", or "textures feel related"
+
+### Reading a boundary check
+
+A boundary check might read:
+
+> Workable 71 — Introduction → Early Groove — Fade Out Lines → Be Where I Am feat. Daniel Wilson • Breakdown entry or echo out — tempo nearly locked • key clash risk • textures feel related
+
+Break it down like this:
+
+| Part | Meaning |
+|---|---|
+| **Workable 71** | The score label and numeric value. Labels range from "Ugly" at the low end through "Workable", "Solid", and "Smooth" at the high end. |
+| **Introduction → Early Groove** | The two phases this boundary connects. |
+| **Fade Out Lines → Be Where I Am feat. Daniel Wilson** | The specific last and first tracks on either side of the boundary. |
+| **Breakdown entry or echo out** | A suggested technique for executing this transition in a way that suits both tracks. |
+| **tempo nearly locked** | A positive sub-label — the BPM gap is small. |
+| **key clash risk** | A caution sub-label — the keys are not harmonically compatible. Consider a key-neutral technique or reordering. |
+| **textures feel related** | A positive sub-label — the vibe tags are compatible. |
+
+If a boundary score is low, try reordering the last track of the outgoing phase or the first track of the incoming phase to find a pair with a better natural connection.
+
+## Risky hops
+
+The **Risky hops** section lists track-to-track transitions anywhere on the board that score poorly enough to warrant attention. When there are no problematic hops, the section shows:
+
+> No ugly gear-grinds right now
+
+A risky hop appears when a transition scores below the threshold that the engine considers acceptable given your current priority weights. The panel shows the track pair, the score, and the primary reason for the low score (for example, a large BPM gap or a severe key clash).
+
+### Addressing a risky hop
+
+<Steps>
+  <Step title="Identify the hop">
+    Click the track pair named in the Risky hops section to locate it on the board. The relevant transition badge will highlight.
+  </Step>
+  <Step title="Inspect the sub-labels">
+    Read the diagnostic notes to understand whether the problem is tempo, key, energy, or vibe.
+  </Step>
+  <Step title="Try reordering">
+    Drag one of the two tracks up or down within its phase to give it a different neighbor. Often one small reorder eliminates the risky hop.
+  </Step>
+  <Step title="Swap from the crate">
+    If reordering does not help, move the weaker track to the crate and pull in the best-from-crate suggestion for that slot.
+  </Step>
+  <Step title="Accept or adjust priorities">
+    If the hop is intentional, lower the weight of the flagged factor on the priority sliders to reduce its influence on the score.
+  </Step>
+</Steps>

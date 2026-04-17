@@ -1,0 +1,64 @@
+---
+title: "Generate and auto-fit your set board"
+description: "Use Generate Board, Auto Analyze Tracks, and Auto Stage-Fit Set to let Energy Arc automatically sort and optimize your set across five phases."
+---
+
+After you import your tracks, Energy Arc gives you three tools to build and refine the board automatically. Each one does a different job, and knowing when to reach for each one saves you a lot of manual dragging.
+
+## Generate Board
+
+Click **Generate Board** to distribute your imported tracks across five phase columns:
+
+<CardGroup cols={2}>
+  <Card title="Introduction" icon="sun">
+    Warm-up, low pressure, patient and magnetic.
+  </Card>
+  <Card title="Early Groove" icon="music">
+    The room starts leaning in and moving together.
+  </Card>
+  <Card title="Lift" icon="arrow-trend-up">
+    Tension rises and the set starts showing its teeth.
+  </Card>
+  <Card title="Peak" icon="bolt">
+    Main-room heat, biggest payoff, chest-rattle zone.
+  </Card>
+  <Card title="Landing" icon="moon">
+    Comedown and exhale without draining the floor.
+  </Card>
+</CardGroup>
+
+Energy Arc reads the BPM, Key, Energy, and tag data on each track to decide which phase it belongs in. Tracks with no tags yet get placed based on BPM alone.
+
+<Note>
+  Generate Board replaces your current board layout. If you have manual changes you want to keep, save the board first using **Save Board**.
+</Note>
+
+**When to use it:** Run **Generate Board** once after your initial import to get a starting layout you can refine from there.
+
+## Auto Analyze Tracks
+
+Click **Auto Analyze Tracks** to have Energy Arc re-examine your track data and update tag guesses — Role, Energy, Vibe, Vocals, Drums — without moving anything on the board.
+
+This is useful when:
+- You imported tracks with incomplete metadata and filled in BPM or Key after the fact
+- You manually edited a few tracks and want to refresh the guesses on the rest
+- You are using the demo set and want to see how the analysis logic works
+
+<Tip>
+  Auto Analyze Tracks updates guesses only. If you have manually set a tag in the Track Inspector and applied it, your override is not touched — re-analysis only fills in fields that are still on their defaults.
+</Tip>
+
+**When to use it:** After updating raw track metadata, before re-running **Generate Board** or **Auto Stage-Fit Set**.
+
+## Auto Stage-Fit Set
+
+Click **Auto Stage-Fit Set** to do two things in one pass:
+
+1. **Re-sort by phase fit** — tracks that are in the wrong phase column for their energy and tags get moved to a column that suits them better.
+2. **Smooth transitions within lanes** — inside each phase column, tracks get reordered to minimize jarring key or BPM jumps between adjacent cards.
+
+<Note>
+  Auto Stage-Fit Set moves tracks between columns and reorders them within columns. Your transition badges update immediately to reflect the new order.
+</Note>
+
+**When to use it:** After a round of manual edits leaves the board feeling uneven, or when you add several new tracks and want to slot them into the right phases without placing each one by hand.

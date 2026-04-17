@@ -1,0 +1,41 @@
+---
+title: "Energy Arc: What it does and how to use it"
+description: "Energy Arc is a fully local, browser-based set planner that auto-sorts your tracks into five energy phases and scores every transition in real time."
+---
+
+Energy Arc is a browser-based DJ set planning tool that turns a raw track list into a structured, scored board — no account required, no data sent anywhere. You paste your tracks, click **Generate Board**, and the app arranges them across five energy phases while scoring every neighbour transition on BPM continuity, key compatibility, energy smoothness, and more. Drag cards to refine the sequence and watch the arc chart update instantly.
+
+## Key features
+
+<CardGroup cols={2}>
+  <Card title="Live transition scoring" icon="gauge">
+    Every track-to-track transition receives a score from 0–100. Scores below ~65 are flagged as risky hops so you can spot rough edges before you play.
+  </Card>
+  <Card title="Five-phase energy arc" icon="chart-line">
+    Tracks are auto-sorted into Introduction, Early Groove, Lift, Peak, and Landing phases that follow an ideal energy curve.
+  </Card>
+  <Card title="Drag-and-drop board" icon="arrows-up-down-left-right">
+    Reorder tracks within a phase or move them between phases. Transition badges and the Live Arc chart refresh as you drag.
+  </Card>
+  <Card title="Track Inspector" icon="magnifying-glass">
+    Click any card to edit BPM, key, energy level, role, vocals, drums, and vibe — then watch scores recalculate immediately.
+  </Card>
+  <Card title="Smart recommendations" icon="wand-magic-sparkles">
+    The recommendations panel surfaces the best crate tracks for each phase, flags arc warnings, and checks phase boundaries.
+  </Card>
+  <Card title="Priority sliders" icon="sliders">
+    Tune how much weight the scoring engine places on BPM continuity, key compatibility, energy smoothness, arc fit, vibe, and vocals — each on a 1–10 scale.
+  </Card>
+</CardGroup>
+
+## What you'll find in these docs
+
+- **Get Started** — This introduction and the [quickstart guide](/quickstart) walk you through importing tracks and generating your first board.
+- **Core Concepts** — Deep dives into the [energy arc](/concepts/energy-arc), [phases](/concepts/phases), [transition scoring](/concepts/transition-scoring), and [track tags](/concepts/track-tags) (roles, vibe, drums, vocals).
+- **Using the Board** — Step-by-step guides for [importing tracks](/guides/importing-tracks), [generating the board](/guides/generate-board), [dragging tracks](/guides/dragging-tracks), the [Track Inspector](/guides/track-inspector), and the [Crate](/guides/crate).
+- **Smart Features** — How to use the [priorities engine](/guides/priorities-engine), [recommendations panel](/guides/recommendations), and [quick readouts](/guides/quick-readouts).
+- **Saving & Exporting** — [Save and load](/guides/save-load) your board as JSON, or [export a CSV](/guides/export-csv) for use in a spreadsheet.
+
+<Note>
+  Energy Arc stores everything — your board, crate, and settings — in your browser's `localStorage`. Nothing is sent to a server, and no account is required. This means your data stays on the machine and browser you used to save it. Clearing your browser data will erase your saved board, so use **Save JSON** regularly to keep a portable backup.
+</Note>

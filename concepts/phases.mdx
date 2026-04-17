@@ -1,0 +1,86 @@
+---
+title: "Set phases in Energy Arc"
+description: "Energy Arc divides your set into five phases, each with its own energy target and role guidance, so every track has a clear job to do."
+---
+
+When you click **Generate Board**, Energy Arc automatically sorts your tracks into five ordered phases. Each phase has a distinct mood, an energy range, and track roles that tend to fit naturally. Understanding what each phase is trying to accomplish helps you make better decisions when you drag tracks around manually.
+
+## The five phases
+
+<AccordionGroup>
+  <Accordion title="Introduction — Warm-up, low pressure, patient and magnetic" defaultOpen={false}>
+    The opening phase. Energy is low and the room is still filling. Tracks here should ease listeners in without demanding attention. Avoid anything with heavy drops or intense builds — the floor isn't warmed up yet and an aggressive opener can clear it before the night starts.
+
+    **Energy target:** Low (1–3 on the 1–10 scale)
+
+    **Roles that fit well:** SETTLE, SIMMER
+  </Accordion>
+
+  <Accordion title="Early Groove — The room starts leaning in and moving together" defaultOpen={false}>
+    Energy picks up and the crowd starts to find a shared rhythm. Tracks here should be engaging without being demanding. This is where you establish the musical identity of the set — the vibe, the tempo range, the key center.
+
+    **Energy target:** Low-to-mid (3–5)
+
+    **Roles that fit well:** SIMMER, NUDGE
+  </Accordion>
+
+  <Accordion title="Lift — Tension rises and the set starts showing its teeth" defaultOpen={false}>
+    The build phase. Tracks should feel like they're pushing forward — more energy, tighter BPM, increasing pressure. This is where anticipation builds for the peak. A good Lift makes the Peak feel earned.
+
+    **Energy target:** Mid-to-high (5–7)
+
+    **Roles that fit well:** NUDGE, SPIKE
+  </Accordion>
+
+  <Accordion title="Peak — Main-room heat, biggest payoff, chest-rattle zone" defaultOpen={false}>
+    The climax of the set. Your highest-energy tracks go here. The crowd should be fully committed. Every track in the Peak should be able to hold its own as a centrepiece moment.
+
+    **Energy target:** High (7–10)
+
+    **Roles that fit well:** SPIKE
+  </Accordion>
+
+  <Accordion title="Landing — Comedown and exhale without draining the floor" defaultOpen={false}>
+    The closing phase. Energy descends and the set winds down gracefully. Tracks should release tension without feeling abrupt. The goal is to leave the floor satisfied, not depleted.
+
+    **Energy target:** Mid-to-low (3–5, descending)
+
+    **Roles that fit well:** RELEASE, SETTLE
+  </Accordion>
+</AccordionGroup>
+
+## Phase and role reference
+
+The table below summarises where each track role fits across the five phases. Roles are not hard limits — a well-scored SIMMER in the Lift can work — but they reflect what Energy Arc uses when auto-generating the board.
+
+| Phase | Vibe | Primary roles | Secondary roles |
+|-------|------|---------------|-----------------|
+| Introduction | Patient and magnetic | SETTLE | SIMMER |
+| Early Groove | Room starts moving together | SIMMER | NUDGE |
+| Lift | Set shows its teeth | NUDGE | SPIKE |
+| Peak | Biggest payoff | SPIKE | — |
+| Landing | Exhale without draining | RELEASE | SETTLE |
+
+## Track roles explained
+
+<CardGroup cols={2}>
+  <Card title="SETTLE" icon="circle-pause">
+    Low-pressure, atmospheric tracks. Sets the mood without demanding energy from the crowd. Best in the Introduction and Landing.
+  </Card>
+  <Card title="SIMMER" icon="circle-dot">
+    Gentle movers. Enough groove to keep things interesting but not enough to push the energy hard. Natural fit for Introduction and Early Groove.
+  </Card>
+  <Card title="NUDGE" icon="circle-chevron-up">
+    Builders. These tracks move the energy upward without spiking it. They make the transition from groove to peak feel gradual and controlled. Early Groove and Lift.
+  </Card>
+  <Card title="SPIKE" icon="bolt">
+    Peak-level tracks. Maximum energy, designed to demand full commitment from the floor. Lift and Peak only.
+  </Card>
+  <Card title="RELEASE" icon="circle-chevron-down">
+    Tension-relievers. After the Peak, these tracks let the floor breathe. Landing phase.
+  </Card>
+</CardGroup>
+
+<Note>
+  You can change a track's Role in the **Track Inspector**. If the auto-detected role doesn't match how you intend to use the track, updating it helps Energy Arc score transitions and suggest placements more accurately.
+</Note>

@@ -1,0 +1,71 @@
+---
+title: "Tune the scoring engine with priority sliders"
+description: "Adjust six priority sliders to control how each scoring factor is weighted, shaping the engine to reflect your personal mixing style in real time."
+---
+
+The scoring engine rates every track-to-track transition on six independent factors. Priority sliders let you control how much each factor influences the final score. Slide a factor up when it matters most to your style; slide it down when you are willing to trade that quality for something else. The engine re-scores every transition the moment you move a slider — no need to regenerate the board.
+
+## The six priority sliders
+
+Each slider runs from **1** (lowest weight) to **10** (highest weight).
+
+| Slider | What it measures |
+|---|---|
+| **BPM continuity** | How closely adjacent tracks match in tempo |
+| **Key compatibility** | Whether adjacent tracks are in harmonically related keys |
+| **Energy smoothness** | How gradually energy levels rise and fall across the sequence |
+| **Arc fit** | How well a track's energy level matches the target arc at its position |
+| **Vibe continuity** | Whether adjacent tracks share a consistent mood or genre texture |
+| **Vocals continuity** | Whether adjacent tracks are consistently vocal, instrumental, or mixed |
+
+## What each slider controls
+
+<AccordionGroup>
+  <Accordion title="BPM continuity">
+    Raises or lowers the penalty for tempo jumps between tracks. At high values (8–10) the engine strongly prefers tracks that are within a few BPM of each other or sit at clean harmonic ratios. At low values (1–3) the engine tolerates larger tempo gaps, which is useful if you plan to use DJ techniques like loop-based transitions or key-locked tempo changes.
+  </Accordion>
+  <Accordion title="Key compatibility">
+    Controls how heavily the engine penalises key clashes. Raise this to 8–10 when you are building a harmonically mixed set and want every neighbor pair to sit within the Camelot wheel. Lower it when you rely on EQ drops or other non-harmonic transitions and key clashes are acceptable.
+  </Accordion>
+  <Accordion title="Energy smoothness">
+    Weights the preference for gradual energy movement between adjacent tracks. A high value discourages sudden spikes or drops in energy between neighbors. A low value allows more aggressive step changes, which can work for harder genres where dramatic drops are part of the aesthetic.
+  </Accordion>
+  <Accordion title="Arc fit">
+    Controls how strictly the engine keeps each track close to the ideal energy arc. Raise this when you want the overall set shape to match the target curve tightly. Lower it when you prioritize good neighbor transitions and are comfortable with the arc drifting slightly from the ideal.
+  </Accordion>
+  <Accordion title="Vibe continuity">
+    Weights similarity in mood, genre, and textural feel between adjacent tracks. Raise it for sets where genre coherence is important. Lower it when you are deliberately blending contrasting styles across a phase.
+  </Accordion>
+  <Accordion title="Vocals continuity">
+    Penalises sudden switches between heavily vocal tracks and purely instrumental tracks. Raise it if jarring vocal/instrumental contrasts break your flow. Lower it if your mixing style frequently layers an instrumental drop against a vocal intro.
+  </Accordion>
+</AccordionGroup>
+
+## Tuning tips
+
+<CardGroup cols={2}>
+  <Card title="Harmonic mixing style" icon="music">
+    Raise **Key compatibility** to 9–10 and **BPM continuity** to 7–9. Lower **Vibe continuity** slightly if you pull from multiple genres as long as keys align.
+  </Card>
+  <Card title="Tight tempo sets" icon="gauge">
+    Raise **BPM continuity** to 9–10. This is common for techno and drum and bass sets where maintaining a locked groove matters more than harmonic variety.
+  </Card>
+  <Card title="Arc-first storytelling" icon="chart-line">
+    Raise **Arc fit** and **Energy smoothness** to 9–10. The engine will prioritize tracks that stay close to the target curve and move between phases gradually.
+  </Card>
+  <Card title="Eclectic or genre-blending sets" icon="shuffle">
+    Lower **Vibe continuity** and **Vocals continuity** to 4–6 so the engine tolerates textural contrast. Raise **Energy smoothness** to keep the crowd journey smooth despite genre hops.
+  </Card>
+</CardGroup>
+
+<Tip>
+  Start from the defaults and adjust one or two sliders at a time. Watch the transition badges on the board update immediately — that live feedback is the fastest way to understand what each slider actually changes for your specific track list.
+</Tip>
+
+## Real-time re-scoring
+
+Every slider change triggers an immediate re-score of all transitions. You do not need to click **Generate Board** again. The transition score badges, the arc chart, and the **Smart Recommendations** panel all reflect the new weights within a second. Use this to quickly compare configurations: drag a slider up, see which transitions improve, drag it back down if the tradeoff is not worth it.
+
+<Note>
+  Slider values affect scoring weights but do not change which tracks are assigned to which phase. If you want a full re-sort based on new weights, click **Generate Board** again after dialing in your preferred slider positions.
+</Note>

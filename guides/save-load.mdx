@@ -1,0 +1,77 @@
+---
+title: "Save and reload your board"
+description: "Save your board to the browser with one click, or download a JSON file to transfer your work between devices or keep a permanent backup."
+---
+
+Energy Arc gives you two ways to preserve your work: quick in-browser saves powered by localStorage, and portable JSON files you can download and load back later. Both approaches keep your data entirely local — nothing is sent to a server, and no account is required.
+
+<Note>
+  Your saved boards are tied to the browser and device you are using. If you clear your browser data or switch to a different browser, your in-browser saves will not be there. Use JSON files for anything you want to keep long-term or move between machines.
+</Note>
+
+## In-browser saves
+
+### Saving to the browser
+
+Click **Save Board** (sometimes labeled **Save Set**) to save a snapshot of your current board to localStorage. The app stores the full board state — track assignments, phase positions, priority slider values — under a name you provide.
+
+<Steps>
+  <Step title="Open the save panel">
+    Click the **Save Board** button. A panel opens showing your previously saved sets.
+  </Step>
+  <Step title="Name your save">
+    Enter a name that identifies this version of your set (for example, the event date or a descriptive label like "Saturday Closing Set v2").
+  </Step>
+  <Step title="Confirm the save">
+    Click **Save** to write the snapshot to localStorage. The save appears in the list immediately.
+  </Step>
+</Steps>
+
+### Loading from the browser
+
+Click **Load Saved** to open the list of boards you have saved in the current browser. Select any entry to restore that board state to the canvas.
+
+<Warning>
+  Loading a saved board replaces the current canvas. If you have unsaved changes you want to keep, save the current board first before loading another.
+</Warning>
+
+## JSON files
+
+### Saving to a JSON file
+
+Click **Save JSON + CSV** to download two files at once:
+
+- A **JSON file** — the full save of your board, including all track data, phase assignments, priority slider values, and arc state. This is the file to use when you want to reload the board exactly as it is now.
+- A **CSV file** — a spreadsheet-friendly export of the current track sequence. See [Export your set list to CSV](/guides/export-csv) for details on what the CSV contains and how to use it.
+
+Store the JSON file somewhere you will find it — a cloud folder, a USB drive, or a project folder — so you can load it back whenever you need it.
+
+### Loading a JSON file
+
+Click **Load JSON File** and select a previously downloaded JSON file from your computer. Energy Arc reads the file and restores the board to the exact state it was in when you saved it, including priority slider positions.
+
+<Steps>
+  <Step title="Click Load JSON File">
+    The browser opens a standard file picker.
+  </Step>
+  <Step title="Select your JSON file">
+    Navigate to the JSON file you saved earlier and confirm the selection.
+  </Step>
+  <Step title="Review the restored board">
+    The canvas updates to reflect the saved state. Check the arc chart and transition scores to confirm everything loaded correctly.
+  </Step>
+</Steps>
+
+## Choosing the right option
+
+| Situation | Recommended approach |
+|---|---|
+| Saving progress during a single session | **Save Board** to localStorage — fastest, no file management needed |
+| Coming back to a set on the same machine, same browser | **Load Saved** from the in-browser list |
+| Moving a set to a different computer | **Save JSON + CSV**, then **Load JSON File** on the other machine |
+| Keeping a permanent backup or archive | **Save JSON + CSV** — store the JSON file outside the browser |
+| Sharing your board with another DJ | **Save JSON + CSV**, send the JSON file, they load it with **Load JSON File** |
+
+<Tip>
+  Get into the habit of downloading a JSON file at the end of each session, even if you also use the in-browser save. Browsers can clear localStorage unexpectedly (private browsing, cache clearing, reinstalls), and a JSON file on your drive is always there.
+</Tip>

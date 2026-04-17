@@ -1,0 +1,76 @@
+---
+title: "Edit track tags with the Track Inspector"
+description: "Click any track card to open the Track Inspector, where you can override auto-detected tags and read the outgoing transition score."
+---
+
+Energy Arc guesses tags for each track based on its metadata, but the algorithm does not always get it right. A track that reads as mid-energy in the data might hit much harder in a room. The Track Inspector lets you override any tag and see exactly how the change affects the outgoing transition.
+
+## Open the inspector
+
+Click any track card on the board. The Track Inspector panel opens, showing the track's current tags and the Transition Decoder for the step out of that track.
+
+## Editable fields
+
+The inspector exposes every tag that Energy Arc uses to score transitions and fit phases.
+
+### BPM and Key
+
+**BPM** and **Key** are the raw values imported from your track list. If the source data is wrong or you want to override what was pasted in, edit them directly here.
+
+### Energy
+
+**Energy** is a 1–10 scale representing how much heat the track brings to the room. A 1 is a near-silent ambient piece; a 10 is full peak-floor material. This value has a direct effect on which phase the track fits and how the arc chart draws.
+
+### Role
+
+**Role** describes the function the track plays in a set:
+
+| Role | Meaning |
+|------|---------|
+| SETTLE | Brings the energy down and gives the floor a breath |
+| SIMMER | Holds a steady level without pushing or dropping |
+| NUDGE | Moves the energy up gradually |
+| SPIKE | Jumps the energy quickly |
+| RELEASE | Provides a cathartic drop or outro moment |
+
+### Vocals
+
+**Vocals** sets the vocal density of the track: `LOW`, `MID`, or `HIGH`. Energy Arc uses this when smoothing transitions — back-to-back HIGH vocal tracks can feel cluttered.
+
+### Drums
+
+**Drums** describes the drum character: `SOFT`, `ROLLING`, or `PUNCHY`. This affects transition scoring when adjacent tracks have clashing drum feels.
+
+### Vibe
+
+**Vibe** is the atmospheric character of the track. Select one:
+
+`ORGANIC` · `MELODIC` · `INDIE` · `DARK` · `RAVEY`
+
+Vibe is used by **Auto Stage-Fit Set** to cluster similar tracks within a phase lane and smooth the feel of transitions.
+
+## Apply your changes
+
+After editing any field, click **Apply Changes** to write the new values back to the track. The transition badges on surrounding cards recalculate immediately.
+
+<Warning>
+  Navigating away from the inspector without clicking **Apply Changes** discards any edits you have made in that session.
+</Warning>
+
+## Move a track to the crate
+
+Click **Move to Crate** to pull the track off the board and onto the bench. The track stays available and appears in the recommendations panel as a "best from crate" suggestion. See [Using the crate for alternate tracks](/guides/crate) for details.
+
+## Transition Decoder
+
+The bottom of the inspector shows the **Transition Decoder** for the step out of this track — the connection to the next card in the set. It displays:
+
+- **Technique** — a label describing the recommended mixing approach, such as "Long EQ blend", "Phrase-aligned bass swap", or "Breakdown entry or echo out"
+- **Score** — a numerical rating (0–100) of how smooth that transition is expected to be
+- **Sub-labels** — short diagnostic notes on BPM, key, and texture compatibility
+
+Use the Transition Decoder to understand _why_ a badge is scoring the way it is, and to decide whether changing a tag will help. For example, if the sub-labels show a key clash and you know the track's key was imported incorrectly, fixing the key here and clicking **Apply Changes** will give you an accurate score immediately.
+
+<Tip>
+  If you know a track better than the algorithm does — it is darker and punchier than the tags suggest, or it builds slower than the BPM implies — this is the place to say so. Accurate tags lead to better auto-fit results and more meaningful transition scores.
+</Tip>
